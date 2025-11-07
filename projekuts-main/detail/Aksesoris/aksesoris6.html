@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooling Pad - Toko Komputer Sejahtera</title>
+    <link rel="icon" href="../../asset/profile.png">
+    <link rel="icon" type="image/x-icon" href="/asset/logo.png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .product-detail {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            margin-top: 140px;
+        }
+        .product-image {
+            flex: 1;
+        }
+        .product-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .product-info {
+            flex: 1;
+            background-color: #D8CFBC30;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .product-info h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .product-info .price {
+            font-size: 28px;
+            color: #4e6851;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .product-info .description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 20px 0;
+        }
+        .buy-button {
+            background-color: #4e6851;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .buy-button:hover {
+            background-color: #237dad;
+        }
+        .back-button {
+            background-color: #a4ac86;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-bottom: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #7f4f24;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h2>Toko Komputer</h2>
+                <h1>Sejahtera</h1>
+            </div>
+            <div class="header-right">
+                <ul class="link">
+                    <li><a href="../../index.html">Beranda</a></li>
+                    <li><a href="../../produk.html">Produk</a></li>
+                    <li><a href="../../index.html#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="../../index.html#kontak">Kontak</a></li>
+                    <li><a href="../../FAQ.html">FAQ</a></li>
+                </ul>
+                <div class="search-container">
+                    <form action="/search" method="get">
+                      <input type="search" id="search-input" name="q" placeholder="Search...">
+                    </form>
+                  </div>
+                  <div class="change-mode">
+                    <button id="button-mode" onclick="toggleMode()">Ganti Mode</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <a href="../../produk.html" class="back-button">← Kembali ke Produk</a>
+            
+            <div class="product-detail">
+                <div class="product-image">
+                    <img src="../../asset/aksesoris/aksesoris6.jpg" alt="Cooling Pad">
+                </div>
+                <div class="product-info">
+                    <h1>Cooling Pad</h1>
+                    <div class="price">Rp.420.000</div>
+                    <div class="description">
+                        <p>Cooling Pad adalah pendingin laptop dengan kipas. Membantu menjaga suhu laptop tetap optimal saat digunakan.</p>
+                    </div>
+                    <button class="buy-button" onclick="alert('Terima kasih! Produk telah ditambahkan ke keranjang.')">Beli Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="myBtn"><img src="../../asset/up.png" alt=""></button>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-info">
+            <h3>Toko Komputer Sejahtera</h3>
+            <p>Jl. Melati No. 27, Semarang Utara, Kota Semarang, Jawa Tengah 50178</p>
+            <p>Telepon: (024) 7654-9821 | WhatsApp: +62 813-4567-8921</p>
+            <p>Email: cs@komputersejahtera.id</p>
+          </div>
+          <div class="footer-copy">
+            <p>&copy; 2025 Toko Komputer Sejahtera. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

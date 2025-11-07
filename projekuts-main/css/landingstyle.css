@@ -1,0 +1,105 @@
+.content-welcome {
+    flex: 1; /* Mengambil sisa ruang yang tersedia */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #D8CFBC30;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    align-items: flex-start;
+}
+
+.welcome-text {
+    flex: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.welcome-image {
+    flex: 0 0 auto;
+}
+
+.content-welcome h2 {
+    font-weight: bold;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.content-welcome li {
+    margin-top: 10px;
+    text-decoration: dotted;
+}
+
+.content-welcome img {
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.product-card-welcome {
+    background-color: #D8CFBC30;
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+
+
+.product-card-welcome h3 {
+    margin: 10px 5px;
+    color: #333;
+}
+
+
+.product-card-welcome button {
+    border: none;
+    color: #D8CFBC30;
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.product-card-welcome a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* efek hover kartu */
+.product-card-welcome:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    
+}
+
+
+.kategori-produk {
+    flex: 1;
+    background-color: #D8CFBC30;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+}

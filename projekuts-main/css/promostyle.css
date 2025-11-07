@@ -1,0 +1,103 @@
+.promo-hero {
+    background: linear-gradient(135deg, #4e6851 0%, #237dad 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.promo-hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #b83a2d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.promo-card {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #cff0c530;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #00000010;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 50px 5px 5px 5px;
+    border: 2px solid #4e6851;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(79, 104, 81, 0.4);
+    border-color: #237dad;
+}
+
+.price-container {
+    margin: 15px 0;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    color: #b83a2d;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.savings {
+    color: #237dad;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.promo-section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+    color: #4e6851;
+    text-align: center;
+    border-bottom: 3px solid #4e6851;
+    padding-bottom: 10px;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .promo-hero h1 {
+        font-size: 32px;
+    }
+    .promo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

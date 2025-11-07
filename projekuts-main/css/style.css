@@ -1,0 +1,674 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ==============================
+   Mengatur gaya umum body
+============================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #c2c5aa;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    padding-top: 120px;
+}
+
+/* ==============================
+   Header
+============================== */
+.header {
+    background-color: #4e6851;
+    color: #060606;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px #cff0c550;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+}
+
+.header-left h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.header-left p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.link {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 3px;
+}
+
+.link li {
+    font-size: 18px;
+}
+
+.link li a {
+    color: #060606;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0px 15px 0px 0px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.link li a:hover {
+    color: #c2c5aa;
+}
+
+/* ==============================
+   Search Box
+============================== */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 0 px 20px;
+  }
+  
+  #search-input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+  }
+  
+
+
+
+/* ==============================
+   Struktur utama halaman
+============================== */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start; 
+
+}
+.product-container {
+    display: flex;
+    white-space: normal;
+    width: 100%; 
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+/* ==============================
+   Sidebar
+============================== */
+.sidebar {
+    flex: 0 0 200px; /* Lebar tetap 200px, tidak tumbuh atau menyusut */
+    background-color: #D8CFBC50;
+    padding: 15px;
+    border-radius: 10px;
+    height: 1000px;
+    box-shadow: 0 8px 8px #cff0c550;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #060606;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #4e6851;
+  }
+
+
+
+  .sidebar h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .sidebar li {
+    margin-bottom: 50px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+/* ==============================
+   Konten utama
+============================== */
+
+.content {
+    flex: 1; /* Mengambil sisa ruang yang tersedia */
+    flex-direction: column;
+    background-color:   #D8CFBC30 ;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 8px #cff0c550;
+}
+
+.content h2 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.content li {
+    margin-top: 10px;
+    text-decoration: dotted;
+}
+
+/* ==============================
+   Katalog Produk
+============================== */
+
+
+.catalog-container-child {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom per baris */
+    gap: 20px;
+    padding: 20px 0;
+}
+.catalog-container-child img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ==============================
+   Kartu Produk
+============================== */
+.kategori-produk {
+    flex: 1;
+    background-color: #dcc9a920;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px 30px 30px 30px;
+}
+
+.kategori-produk h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.product-card {
+    width: auto;
+    height: auto;
+    background-color: #cff0c530;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #00000010;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start;
+    padding: 50px 5px 5px 5px;
+}
+
+
+
+.product-card h3 {
+    margin: 10px 5px;
+    color: #333;
+}
+
+.product-card .price {
+    color: #008BCA;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    background-color: #4e6851;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+
+.product-card button:hover {
+    background-color: #237dad;
+}
+
+.product-card a {
+    text-decoration: none;
+    color: white;
+}
+
+/* efek hover kartu */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px #cff0c550;
+}
+
+.product-img img {
+    width: 100px;
+    height: 100px; 
+    margin-bottom: 40px;  
+}
+
+
+
+
+/* ==============================
+   Section
+============================== */
+section {
+    scroll-margin-top: 140px; 
+}
+
+/* ==============================
+   Floating Back-To-Top Button
+============================== */
+#myBtn {
+    position: fixed;
+    bottom: 5px;
+    float: right;
+    right: 5%;
+    left: 95%;
+    max-width: 100px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #a4ac86;
+    padding: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    
+
+}
+
+#myBtn:hover {
+    background-color: #b83a2d;
+}
+#myBtn a {
+    text-decoration: none;
+}
+
+#myBtn img {
+    width: 30px;
+    height: 30px;
+}
+/* ==============================
+   Footer
+============================== */
+.footer {
+    background-color: #4e6851; /* warna header biar konsisten */
+    color: #060606;
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .footer-info p {
+    font-size: 14px;
+    margin: 4px 0;
+  }
+  
+  .footer-copy {
+    margin-top: 15px;
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  
+
+/* ==============================
+   Contact Container
+============================== */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+.contact-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.contact-item p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* ==============================
+   Responsif (Mobile)
+============================== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        position: static;
+        flex-wrap: wrap;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.pertanyaan {
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #d9ebf7;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .jawaban {
+    display: none; /* disembunyikan dulu */
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #eef6fb;
+    border-left: 3px solid #237dad;
+  }
+
+
+
+
+  /* ==============================
+   dark mode button
+============================== */
+.change-mode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+#button-mode {  
+    max-width: 70px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #4e6851;
+    border: #eeeeee;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: white;
+}
+
+#button-mode:hover {
+    background-color: #a68a64;
+}
+#button-mode a {
+    text-decoration: none;
+}
+
+.clock-display {
+    font-size: 16px;
+    font-weight: bold;
+    color: #060606;
+    white-space: nowrap;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.dark-mode {
+    background-color: #936639 ;
+    color:#fffbf4;
+    .header {
+        background-color: #7f4f24;
+        color: #fffbf4;
+    }
+
+.header a {
+    color: #fffbf4;
+}
+    footer {
+        background-color: #7f4f24;
+        color: #fffbf4;
+    }
+    .footer p {
+        color: #ffffff;
+    }
+    .product-card-welcome button {
+
+        background-color: #a68a6401;
+    
+    }
+    a,h1,h2,h3,h4,h5,h6,p,li {
+        color: #fffbf4;
+    }
+    .contact-form button {
+        background-color: #936639 ;
+        color: white;
+    }
+    .product-card-welcome a {
+        color: white;
+    }
+    .promo-section-title {
+        color: #fffbf4;
+        border-bottom-color: #fffbf4;
+    }
+    .promo-card {
+        background-color: #a68a6430;
+        border-color: #fffbf4;
+    }
+    .promo-card h3 {
+        color: #fffbf4;
+    }
+    .original-price {
+        color: #ccc;
+    }
+    .promo-hero {
+        background: linear-gradient(135deg, #7f4f24 0%, #a68a64 100%);
+    }
+    .clock-display {
+        color: #fffbf4;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+  }
+
+  /* ==============================
+   form
+============================== */
+
+
+  
+  /* Card */
+  .card {
+    
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: none !important;
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    
+  }
+  
+  /* Text Styles */
+  .blue-text {
+    color: #00BCD4;
+  }
+  
+  .form-control-label {
+    margin-bottom: 0;
+  }
+  
+  /* Input, Textarea, Button Base Styles */
+  input,
+  textarea,
+  button {
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300;
+  }
+  
+  /* Focus Effects */
+  input:focus,
+  textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400;
+  }
+  
+  /* Buttons */
+  .btn-block {
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer;
+  }
+  
+  .btn-block:hover {
+    color: #fff !important;
+  }
+  
+  button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+  }
+
+
+  .content-form {
+   /* flex: 1;  Mengambil sisa ruang yang tersedia */
+    background-color: #dcc9a9;
+    margin: 20px 20px 20px 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    padding-left: 30%;
+    padding-right: 30%;
+}
+  
+.content-form h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
