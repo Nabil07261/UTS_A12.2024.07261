@@ -26,7 +26,7 @@
                     <li><a href="index.html">Beranda</a></li>
                     <li><a href="produk.html">Produk</a></li>
                     <li><a href="index.html#tentang-kami">Tentang Kami</a></li>
-                    <li><a href="index.html#kontak">Kontak</a></li>
+                    <li><a href="form.html">Kontak</a></li>
                     <li><a href="FAQ.html">FAQ</a></li>
                     <li><a href="promo.html">Promo</a></li>
 
@@ -67,7 +67,7 @@
                         <img src="asset/mouse/mouse1.jpg" alt="Produk 1">
                         <H3>RAZER MOUSE</H3>
                         <h3>Harga : Rp.320.000</h3>
-                        <button onclick="window.location.href='detail/mouse/mouse1.html'">Beli</button>
+                        <button onclick="window.location.href='/detail/mouse/mouse1.html'">Beli</button>
                     </div>
 
                     <div class="product-card">
@@ -108,7 +108,7 @@
             </div>
     </section>
 
-    <section id="monitor" class="product-section" style="display: none;">
+    <section id="monitor" class="product-section">
             <h2>Jenis Monitor</h2>
             <div class="catalog-container-child">
 
@@ -157,7 +157,7 @@
             </div>
     </section>
 
-    <section id="keyboard" class="product-section" style="display: none;">
+    <section id="keyboard" class="product-section">
             <h2>Jenis Keyboard</h2>
             <div class="catalog-container-child">
 
@@ -206,7 +206,7 @@
             </div>
     </section>
 
-    <section id="storage" class="product-section" style="display: none;">
+    <section id="storage" class="product-section">
             <h2>Jenis Storage</h2>
             <div class="catalog-container-child">
 
@@ -255,7 +255,7 @@
             </div>
     </section>
 
-    <section id="memori" class="product-section" style="display: none;">
+    <section id="memori" class="product-section">
             <h2>Jenis Memori</h2>
             <div class="catalog-container-child">
     
@@ -304,7 +304,7 @@
             </div>
     </section>
 
-    <section id="aksesoris" class="product-section" style="display: none;">
+    <section id="aksesoris" class="product-section">
             <h2>Jenis Aksesoris</h2>
             <div class="catalog-container-child">
 
@@ -377,41 +377,6 @@
         function toggleMode() {
             document.body.classList.toggle("dark-mode");
         }
-
-        // Fungsi untuk menampilkan/menyembunyikan section produk
-        function showProductSection(sectionId) {
-            // Sembunyikan semua section
-            const allSections = document.querySelectorAll('.product-section');
-            allSections.forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // Tampilkan section yang dipilih
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-        }
-
-        // Event listener untuk semua link kategori di sidebar
-        document.addEventListener('DOMContentLoaded', function() {
-            const categoryLinks = document.querySelectorAll('.sidebar a[href^="#"]');
-            
-            categoryLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault(); // Mencegah default anchor behavior
-                    
-                    const href = this.getAttribute('href');
-                    const sectionId = href.substring(1); // Hapus tanda #
-                    
-                    // Tampilkan section yang sesuai
-                    showProductSection(sectionId);
-                });
-            });
-
-            // Tampilkan section mouse secara default saat halaman dimuat
-            showProductSection('mouse');
-        });
     </script>
 </body>
 </html>
