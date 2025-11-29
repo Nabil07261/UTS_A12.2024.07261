@@ -93,6 +93,39 @@
     padding: 20px 0;
 }
 
+.promo-card button {
+    background-color: #4e6851;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+
+.promo-card button:hover {
+    background-color: #237dad;
+}
+
+.promo-card a.button {
+    display: inline-block;
+    background-color: #4e6851;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.promo-card a.button:hover {
+    background-color: #237dad;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .promo-hero h1 {
         font-size: 32px;
